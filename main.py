@@ -71,7 +71,7 @@ async def welcome_new_member(update: Update, context: ContextTypes.DEFAULT_TYPE)
     if message.new_chat_members:
         for new_member in message.new_chat_members:
             if not new_member.is_bot:
-               welcome_text = f"hey @{new_member.username or new_member.first_name} welcome to the chat!\n\nplease introduce yourself and what you are working on! "
+                welcome_text = f"hey @{new_member.username or new_member.first_name} welcome to the chat!\n\nplease introduce yourself and what you are working on! "
                 await message.reply_text(welcome_text)
                 print(f"✅ Welcomed: {new_member.first_name}")
 
